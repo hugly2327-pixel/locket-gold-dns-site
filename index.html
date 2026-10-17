@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b0b0c">
+<title>Locket Gold · Cài đặt DNS</title>
+<style>
+:root{color-scheme:dark;--bg:#09090a;--panel:#151516;--line:#303033;--gold:#e7bd55;--gold2:#ffdf83;--text:#f5f5f7;--muted:#a5a5ab}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at top,#29200c 0%,#111112 35%,#09090a 72%);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh}
+main{width:min(100% - 32px,520px);margin:0 auto;padding:calc(30px + env(safe-area-inset-top)) 0 calc(34px + env(safe-area-inset-bottom))}
+.brand{display:flex;align-items:center;gap:10px;color:var(--gold2);font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.crown{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(145deg,#f6d982,#a97717);color:#17120a;font-size:22px;box-shadow:0 5px 25px #e7bd5524}
+h1{font-size:34px;line-height:1.05;letter-spacing:-.8px;margin:25px 0 12px}
+.gold{color:var(--gold2)}
+.lead{font-size:16px;line-height:1.55;color:var(--muted);margin:0 0 24px}
+.panel{background:linear-gradient(160deg,#1b1b1d,#111112);border:1px solid var(--line);border-radius:22px;padding:20px;margin:14px 0;box-shadow:0 18px 45px #0004}
+.row{display:flex;gap:14px;align-items:center}
+.fileicon{width:50px;height:50px;flex:0 0 auto;border-radius:15px;display:grid;place-items:center;background:#302712;color:var(--gold2);font-size:24px}
+h2{font-size:17px;margin:0 0 5px}
+.meta{font-size:13px;color:var(--muted);line-height:1.45;margin:0;overflow-wrap:anywhere}
+.button{display:block;text-decoration:none;text-align:center;border:0;border-radius:15px;background:linear-gradient(135deg,#f8df8e,#c7952d);color:#17120a;font-size:17px;font-weight:800;padding:16px;margin-top:20px;box-shadow:0 8px 24px #c7952d25}
+.button:active{opacity:.78}
+.section-title{font-size:18px;margin:0 0 12px}
+ol{margin:0;padding-left:21px;color:#dedee2}
+li{padding-left:4px;margin:10px 0;line-height:1.5}
+.note{border:1px solid #5b4922;background:#211b0e;border-radius:15px;padding:15px;color:#e9ddb9;font-size:13px;line-height:1.55;margin-top:16px}
+.note strong{color:var(--gold2)}
+footer{text-align:center;color:#77777f;font-size:12px;line-height:1.55;padding:20px 12px}
+a.inline{color:var(--gold2)}
+</style>
+</head>
+<body>
+<main>
+  <div class="brand"><div class="crown" aria-hidden="true">♛</div><span>Locket Gold · DNS Profile</span></div>
+  <h1>Cài đặt <span class="gold">DNS</span><br>trên iPhone</h1>
+  <p class="lead">Tải hồ sơ DNS-over-TLS được cấu hình với NextDNS. Sau khi tải, iOS yêu cầu bạn mở Cài đặt và tự xác nhận việc cài đặt.</p>
+
+  <section class="panel">
+    <div class="row">
+      <div class="fileicon" aria-hidden="true">⌁</div>
+      <div>
+        <h2>LocketGoldDNS.mobileconfig</h2>
+        <p class="meta">DNS-over-TLS · NextDNS<br>Máy chủ: bb475f.dns.nextdns.io</p>
+      </div>
+    </div>
+    <a class="button" href="./LocketGoldDNS.mobileconfig" download="LocketGoldDNS.mobileconfig">Tải cấu hình DNS</a>
+    <p class="meta" style="margin-top:12px">Dùng Safari trên iPhone để có trải nghiệm tải hồ sơ phù hợp nhất.</p>
+  </section>
+
+  <section class="panel">
+    <h2 class="section-title">Cách cài đặt</h2>
+    <ol>
+      <li>Mở trang này bằng Safari trên iPhone.</li>
+      <li>Nhấn <strong>Tải cấu hình DNS</strong> và cho phép tải nếu được hỏi.</li>
+      <li>Mở ứng dụng <strong>Cài đặt</strong> và chọn <strong>Đã tải về hồ sơ</strong> nếu mục này xuất hiện.</li>
+      <li>Kiểm tra thông tin hồ sơ, sau đó nhấn <strong>Cài đặt</strong> và xác nhận theo hướng dẫn của iOS.</li>
+      <li>Nếu không thấy thông báo, mở <strong>Cài đặt → Cài đặt chung → VPN &amp; Quản lý thiết bị</strong> để kiểm tra hồ sơ đã tải/cài.</li>
+    </ol>
+  </section>
+
+  <div class="note"><strong>Đọc trước khi cài:</strong> hồ sơ này thay đổi cấu hình DNS của iPhone sang NextDNS theo các giá trị bên trong file. Nó không cài ứng dụng Locket, không tạo giao dịch Gold và không tự mở khóa thuê bao. Chỉ cài nếu bạn tin tưởng nhà cung cấp DNS và hiểu tác động tới phân giải tên miền.</div>
+  <footer>Trang tải hồ sơ · iOS sẽ luôn giữ bước xác nhận cài đặt do người dùng thực hiện.<br>Không nhập Apple ID, mật khẩu hoặc thông tin thanh toán trên trang này.</footer>
+</main>
+</body>
+</html>
